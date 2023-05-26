@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.stage.Stage?>
+
+<Stage fx:id="window" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kozmikoda.soundanalyzer.SoundAnalyzerController">
+   <scene>
+         <Scene fx:id="mainLayout">
+      <Pane layoutX="8.0" layoutY="6.0" prefHeight="419.0" prefWidth="667.0" style="-fx-background-color: #211126; -fx-border-color: #FFFFFF; -fx-border-width: 0.4; -fx-border-radius: 30; -fx-background-radius: 30;">
+            <Pane fx:id="titlebar" layoutX="-4.0" prefHeight="80.0" prefWidth="671.0" />
+            <TextField fx:id="output" alignment="CENTER" editable="false" layoutX="198.0" layoutY="300.0" prefHeight="34.0" prefWidth="281.0" promptText=" " style="-fx-border-color: #b81484; -fx-background-color: #2A0033; -fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" styleClass="text-input" stylesheets="@style.css" visible="false">
+               <effect>
+                  <DropShadow height="38.59" radius="14.3975">
+                     <color>
+                        <Color green="1.0" blue="0.8761904835700989" />
+                     </color>
+                  </DropShadow>
+               </effect></TextField>
+            <Separator layoutX="34.0" layoutY="78.0" opacity="0.15" prefHeight="3.0" prefWidth="601.0" />
+            <Separator layoutX="33.0" layoutY="381.0" opacity="0.15" prefHeight="3.0" prefWidth="601.0" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="631.0" layoutY="17.0" text="X" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow height="20.65" radius="9.059999999999999" spread="0.67" width="17.59">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="622.0" layoutY="15.0" mnemonicParsing="false" onAction="#closeButton" opacity="0.0" prefHeight="25.0" prefWidth="24.0" style="-fx-background-color: #000000;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" green="0.0833333358168602" blue="0.0833333358168602" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="186.0" layoutY="27.0" prefHeight="21.0" prefWidth="303.0" text="SOUND ANALYZER" textFill="#ddd9d9">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow height="11.53" radius="5.265" spread="0.36" width="11.53">
+                     <color>
+                        <Color red="0.30908870697021484" green="0.6049991846084595" blue="0.7763158082962036" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="61.0" layoutY="97.0" prefHeight="50.0" prefWidth="553.0" text="Find out what the sound is by selecting an audio file (only .wav extension for now) with a maximum length of 3 seconds." textAlignment="JUSTIFY" textFill="#d7d7d7" wrapText="true">
+               <font>
+                  <Font name="Agency FB" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow height="26.86" radius="12.93" spread="0.42" width="26.86">
+                     <color>
+                        <Color red="0.7647058963775635" green="0.0941176488995552" blue="0.7058823704719543" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="61.0" layoutY="160.0" prefHeight="50.0" prefWidth="553.0" text="Currently definable sound classes: Air Conditioner, Car Horn, Children Playing, Dog Bark, Drilling, Engine Idling, Gun Shot, Jackhammer, Siren, Street Music." textAlignment="JUSTIFY" textFill="#d7d7d7" wrapText="true">
+               <font>
+                  <Font name="Agency FB" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow height="26.86" radius="12.93" spread="0.38" width="26.86">
+                     <color>
+                        <Color red="0.7647058963775635" green="0.0941176488995552" blue="0.7058823704719543" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <JFXButton fx:id="selectButton" buttonType="RAISED" layoutX="265.0" layoutY="233.0" onAction="#selectFileButton" prefHeight="35.0" prefWidth="146.0" ripplerFill="WHITE" style="-fx-background-radius: 20;" styleClass="buttonJFX" stylesheets="@style.css" text="Select a Sound" textFill="WHITE">
+               <font>
+                  <Font name="Agency FB" size="19.0" />
+               </font></JFXButton>
+            <ProgressIndicator fx:id="analyzeBar" layoutX="314.0" layoutY="289.0" prefHeight="45.0" prefWidth="50.0" visible="false" />
+            <Label fx:id="analyzeLabel" layoutX="285.0" layoutY="347.0" prefHeight="21.0" prefWidth="108.0" text="Analyzing the sound" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Agency FB" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.09000000357627869" green="0.5926666855812073" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+      </Pane>
+      </Scene>
+   </scene>
+</Stage>
