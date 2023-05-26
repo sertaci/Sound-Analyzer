@@ -1,4 +1,4 @@
 # SoundAnalyzer
  An innovative app that lets you analyze sounds based on city.
  
-![Screenshot_1222](https://github.com/sertaci/Sound-Analyzer/assets/74237094/cc951726-4818-40da-aecd-f2439f94b714)
+![1](https://github.com/sertaci/Sound-Analyzer/assets/74237094/5252e037-2c01-4fa5-a8b9-96593ad280b2)
